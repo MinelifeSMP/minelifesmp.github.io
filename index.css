@@ -1,7 +1,25 @@
-.header {
-        background-color: #1b1c24;
-        padding: 1px;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-  }
+body {
+    margin: 0;
+    padding: 0px;
+    background-color: #555555;
+    color: white;
+}
+
+header {
+    margin: 0;
+    background-color: #1b1c24;
+    min-height: 10vh;
+    padding: 0px;
+    position: static;    
+}
+
+img {
+    max-width: 145px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
