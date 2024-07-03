@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,7 +12,29 @@ body {
 
 header {
     background-color: #1b1c24;
-    justify-content:center;  
+    justify-content:center;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    background-color: blue;
+    height: 100%;
+}
+.column.sidebar {
+    background-color: red;
+    width: 10%;
+    text-align: center;
+}
+.column.main-content {
+    background-color: lawngreen;
+    color: black;
+    width: 90%;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 img {
