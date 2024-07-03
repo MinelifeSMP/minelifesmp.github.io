@@ -8,13 +8,13 @@ body {
 header {
     margin: 0;
     background-color: #1b1c24;
-    min-height: 10vh;
     padding: 0px;
-    position: static;   
+    justify-content:center;  
 }
 
 img {
-    max-width: 145px;
+    max-width: 300px;
+    padding:10px;
 }
 
 .center {
