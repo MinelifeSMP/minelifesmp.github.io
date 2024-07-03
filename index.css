@@ -1,14 +1,16 @@
-body {
+
+* {
     margin: 0;
     padding: 0px;
+}
+
+body {
     background-color: #555555;
     color: white;
 }
 
 header {
-    margin: 0;
     background-color: #1b1c24;
-    padding: 0px;
     justify-content:center;  
 }
 
