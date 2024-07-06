@@ -1,0 +1,129 @@
+@font-face {
+    font-family: minecraftten;
+    src: url(../../assets/fonts/MinecraftTen.woff);
+}
+* {
+    a:link {
+        color: #00AAAA;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+    }
+    a:hover {
+        color: #FFAA00;
+      }
+    a:visited {
+        color: #00AAAA;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+    }
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 120px 1fr;
+    grid-template-columns: 240px 1fr;
+    grid-template-areas: 
+        "header header"
+        "side main";
+    background-image: url(background.png);
+    background-position: center;
+}
+.header {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 999;
+    grid-area: header;
+    background-color: #1b1c24;
+}
+.sidebar {
+    position: sticky;
+    z-index: 999;
+    left: 0;
+    grid-area: side;
+    background-color: rgba(27, 28, 36, 0.8);
+    margin: 10px;
+    padding: 20px;
+
+    color: #FFAA00;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+.main {
+    overflow: auto;
+    grid-area: main;
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 250px;
+    grid-template-areas: 
+        "aboutsection aboutsection infopanel"
+        "customelement references infopanel";
+    gap: 20px;
+}
+.aboutsection {
+    grid-area: aboutsection;
+    background-color: rgba(27, 28, 36, 0.8);
+    padding: 5px;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    color: #00AAAA;
+    font-size: large;
+    h1, h2 {
+        color: #FFAA00;
+        margin-top: 0;
+    }
+}
+.infopanel {
+    grid-area: infopanel;
+    background-color: rgba(27, 28, 36, 0.8);
+    justify-content: center;
+    font-family: minecraftten, sans-serif;
+    color: #00AAAA;
+    text-align: center;
+    font-size: large;
+    h1, h2 {
+        color: #FFAA00;
+    }
+}
+hr {
+    border-top: 1px solid #1b1c24;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.customelement {
+    grid-area: customelement;
+    background-color: rgba(27, 28, 36, 0.8);
+    justify-content: center;
+    display: flex;
+}
+.references {
+    grid-area: references;
+    background-color: rgba(27, 28, 36, 0.8);
+    padding: 5px;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    color: #00AAAA;
+    font-size: large;
+    h1, h2 {
+        color: #FFAA00;
+        margin-top: 0;
+    }
+}
+
+
+.header_logo {
+    max-width: 300px;
+    padding:10px;
+    transition: 0.25s;
+}
+.header_logo:hover {
+    filter: saturate(200%);
+    transform: scale(1.2);
+}
