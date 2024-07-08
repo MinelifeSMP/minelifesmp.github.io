@@ -3,7 +3,7 @@
     src: url(../../assets/fonts/MinecraftTen.woff);
 }
 * {
-    a:link {
+    a:link, a:visited {
         color: #00AAAA;
         text-decoration: none;
         font-weight: bold;
@@ -12,12 +12,6 @@
     a:hover {
         color: #FFAA00;
       }
-    a:visited {
-        color: #00AAAA;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: large;
-    }
 }
 body {
     margin: 0;
@@ -137,7 +131,7 @@ hr {
 .legal {
     grid-area: legal;
     text-align: center;
-    a:link {
+    a:link, a:visited {
         color: #00AAAA;
         text-decoration: none;
         font-size: small;
@@ -146,11 +140,6 @@ hr {
         color: #FFAA00;
         text-decoration: none;
       }
-    a:visited {
-        color: #00AAAA;
-        text-decoration: none;
-        font-size: small;
-    }
 }
 .wdls {
     grid-area: wdls;
