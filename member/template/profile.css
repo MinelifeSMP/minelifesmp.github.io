@@ -54,6 +54,12 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-size: larger;
+
+    display: grid;
+    grid-template-rows: 1fr 10px;
+    grid-template-areas: 
+        "wdls"
+        "legal";
 }
 .main {
     overflow: auto;
@@ -126,4 +132,26 @@ hr {
 .header_logo:hover {
     filter: saturate(200%);
     transform: scale(1.2);
+}
+
+.legal {
+    grid-area: legal;
+    text-align: center;
+    a:link {
+        color: #00AAAA;
+        text-decoration: none;
+        font-size: small;
+    }
+    a:hover {
+        color: #FFAA00;
+        text-decoration: none;
+      }
+    a:visited {
+        color: #00AAAA;
+        text-decoration: none;
+        font-size: small;
+    }
+}
+.wdls {
+    grid-area: wdls;
 }
