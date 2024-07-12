@@ -17,7 +17,7 @@ body {
     margin: 0;
     height: 100vh;
     display: grid;
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: 120px 1fr 50px;
     grid-template-columns: 1fr 240px;
     grid-template-areas: 
         "header header"
@@ -78,7 +78,13 @@ body {
         text-decoration: none;
     }
 }
+
 .header_logo {
     max-width: 300px;
-    padding:10px;    
+    padding:10px;
+    transition: 0.25s;
+}
+.header_logo:hover {
+    filter: saturate(200%);
+    transform: scale(1.2);
 }
