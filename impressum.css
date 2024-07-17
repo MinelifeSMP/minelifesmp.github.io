@@ -27,21 +27,13 @@ body {
     background-image: url(assets/background.png);
     background-position: center;
 }
-.header, footer {
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
     color: whitesmoke;
     font-family:roboto, sans-serif;
     font-weight: bold;
-}
-.header {
-    position: sticky;
-    grid-area: header;
-    top: 0;
-    z-index: 999;
-}
-.footer {
     bottom: 0;
     grid-area: footer;
     a:link, a:visited {
@@ -51,7 +43,7 @@ body {
         font-size: small;
     }
     a:hover {
-        color: green;
+        color: #FFAA00;
         text-decoration: none;
       }
 }
@@ -65,14 +57,4 @@ body {
     a:link, a:visited {
         text-decoration: none;
     }
-}
-
-.header_logo {
-    max-width: 300px;
-    padding:10px;
-    transition: 0.25s;
-}
-.header_logo:hover {
-    filter: saturate(200%);
-    transform: scale(1.2);
 }
