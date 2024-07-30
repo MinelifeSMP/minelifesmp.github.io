@@ -1,3 +1,4 @@
+/* main.css */
 .header {
     display: flex;
     position: sticky;
@@ -10,7 +11,7 @@
 }
 .header_logo {
     max-width: 300px;
-    padding:10px;
+    padding: 10px;
     transition: 0.25s;
 }
 .header_logo:hover {
@@ -25,7 +26,6 @@
     background-color: rgba(27, 28, 36, 0.8);
     margin: 10px;
     padding: 20px;
-
     color: #FFAA00;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
@@ -42,13 +42,13 @@
 .legal {
     grid-area: legal;
     text-align: center;
-    a:link, a:visited {
-        color: #00AAAA;
-        text-decoration: none;
-        font-size: small;
-    }
-    a:hover {
-        color: #FFAA00;
-        text-decoration: none;
-      }
+}
+.legal a:link, .legal a:visited {
+    color: #00AAAA;
+    text-decoration: none;
+    font-size: small;
+}
+.legal a:hover {
+    color: #FFAA00;
+    text-decoration: none;
 }

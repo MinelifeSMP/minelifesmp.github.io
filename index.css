@@ -1,14 +1,16 @@
+/* index.css */
 * {
-    a:link, a:visited {
-        color: #00AAAA;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: large;
-    }
-    a:hover {
-        color: #FFAA00;
-        text-decoration: none;
-      }
+    box-sizing: border-box;
+}
+a:link, a:visited {
+    color: #00AAAA;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+a:hover {
+    color: #FFAA00;
+    text-decoration: none;
 }
 body {
     margin: 0;
@@ -31,9 +33,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
     gap: 10px;
-    a:link, a:visited {
-        text-decoration: none;
-    }
 }
 .member {
     height: fit-content;
@@ -43,13 +42,88 @@ body {
     font-size: larger;
     color: #FFAA00;
     transition: 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px 0;
+    filter: saturate(120%);
+}
+.member.nocontent {
+    filter: opacity(45%);
 }
 .member:hover {
     filter: grayscale(100%);
     transform: scale(1.1);
 }
 .avatar {
-    height: auto;
-    padding-inline: 12.5%;
     width: 75%;
+    max-width: 200px;
+    aspect-ratio: 1;
+    margin-bottom: 10px;
+}
+.member_name {
+    margin-top: 10px;
+    margin-bottom: 0px; /* Reduced gap between name and role text */
+}
+.member_role {
+    margin-top: 0px; /* Reduced gap between name and role text */
+    font-size: smaller;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    body {
+        grid-template-columns: 200px 1fr;
+    }
+    .sidebar {
+        margin: 5px;
+        padding: 15px;
+    }
+    .main {
+        grid-template-columns: repeat(auto-fill, 200px);
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-rows: 80px 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main";
+    }
+    .sidebar {
+        display: none;
+    }
+    .main {
+        grid-template-columns: repeat(auto-fill, 150px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        grid-template-rows: 60px 1fr;
+    }
+    .header_logo {
+        max-width: 200px;
+    }
+    .main {
+        grid-template-columns: repeat(auto-fill, 150px);
+        padding: 10px;
+    }
+    .member {
+        font-size: medium;
+    }
+    .avatar {
+        width: 100%;
+        max-width: 150px;
+    }
+    .member_name {
+        margin-top: 8px;
+        margin-top: 0px; /* Reduced gap between name and role text */
+    }
+    .member_role {
+        margin-top: 0px; /* Reduced gap between name and role text */
+    }
 }
