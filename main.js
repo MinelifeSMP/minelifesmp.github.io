@@ -40,47 +40,38 @@ class WikiMenu extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <wikimenu class="wikimenu">
-            <ul class="menu">
-            <li class="menu-item">
-                <button class="expand-btn">Category 1</button>
-                <ul class="submenu">
-                    <li>Subcategory 1.1</li>
-                    <li>Subcategory 1.2</li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <button class="expand-btn">Category 2</button>
-                <ul class="submenu">
-                    <li>Subcategory 2.1</li>
-                    <li>Subcategory 2.2</li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <button class="expand-btn">Category 3</button>
-                <ul class="submenu">
-                    <li>Subcategory 3.1</li>
-                    <li>Subcategory 3.2</li>
-                </ul>
-            </li>
-        </ul>
+            <p>Wiki:</p>
+            <button class="collapsible">SEASON I</button>
+            <div class="submenu">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="collapsible">SEASON II</button>
+            <div class="submenu">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="collapsible">SEASON III</button>
+            <div class="submenu">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div> 
         </wikimenu>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-            var expandButtons = document.querySelectorAll('.expand-btn');
-
-            expandButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-            var submenu = this.nextElementSibling;
-            if (submenu.style.display === 'block') {
-                submenu.style.display = 'none';
-            } else {
-                submenu.style.display = 'block';
-            }
-            });
-            });
-            });
-        </script>
     `
     }
 }
 customElements.define('wiki-menu', WikiMenu)
+
+//collapsible
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
