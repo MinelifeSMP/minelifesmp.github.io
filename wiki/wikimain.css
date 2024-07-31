@@ -103,10 +103,20 @@ body {
     font-weight: bold;
     color: #00AAAA;
     font-size: large;
-    h1, h2 {
+    h1, h2, h3 {
         color: #FFAA00;
         margin-top: 0;
     }
+    h3 {
+        margin-bottom: 0px;
+    }
+}
+.wikisection {
+    display: flex;
+}
+.img-right {
+    justify-content: flex-end;
+    margin-left: auto;
 }
 .infopanel {
     grid-area: infopanel;

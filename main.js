@@ -51,7 +51,7 @@ class WikiMenu extends HTMLElement {
             </div>
             <button class="collapsible">SEASON III</button>
             <div class="submenu">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="../wiki/season3townhall">- Townhall</a>
             </div> 
         </wikimenu>
     `
