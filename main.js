@@ -34,3 +34,53 @@ class SidebarLegal extends HTMLElement {
     }
 }
 customElements.define('sidebar-legal', SidebarLegal)
+
+//Wiki Menu
+class WikiMenu extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <wikimenu class="wikimenu">
+            <ul class="menu">
+            <li class="menu-item">
+                <button class="expand-btn">Category 1</button>
+                <ul class="submenu">
+                    <li>Subcategory 1.1</li>
+                    <li>Subcategory 1.2</li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="expand-btn">Category 2</button>
+                <ul class="submenu">
+                    <li>Subcategory 2.1</li>
+                    <li>Subcategory 2.2</li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="expand-btn">Category 3</button>
+                <ul class="submenu">
+                    <li>Subcategory 3.1</li>
+                    <li>Subcategory 3.2</li>
+                </ul>
+            </li>
+        </ul>
+        </wikimenu>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            var expandButtons = document.querySelectorAll('.expand-btn');
+
+            expandButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+            var submenu = this.nextElementSibling;
+            if (submenu.style.display === 'block') {
+                submenu.style.display = 'none';
+            } else {
+                submenu.style.display = 'block';
+            }
+            });
+            });
+            });
+        </script>
+    `
+    }
+}
+customElements.define('wiki-menu', WikiMenu)
