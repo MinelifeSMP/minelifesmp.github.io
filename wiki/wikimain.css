@@ -28,15 +28,13 @@ body {
     grid-area: main;
     margin: 10px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 250px;
+    grid-template-columns: 1fr 250px;
     grid-template-areas: 
-        "aboutsection aboutsection infopanel"
-        "customelement references infopanel";
+        "content infopanel";
     gap: 20px;
 }
-.aboutsection {
-    grid-area: aboutsection;
+.content {
+    grid-area: content;
     background-color: rgba(27, 28, 36, 0.8);
     padding: 5px;
     font-family: roboto, sans-serif;
