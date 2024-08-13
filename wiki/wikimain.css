@@ -45,6 +45,11 @@ body {
 }
 .wikimenu {
     grid-area: wikimenu;
+    * {
+        a:link, a:visited {
+            font-size: medium;
+        }
+    }
 }
 
 .collapsible {
@@ -113,6 +118,18 @@ body {
 }
 .wikisection {
     display: flex;
+}
+.wikitextblocks {
+    a:link, a:visited {
+        color: #FFAA00;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+        font-style: italic;
+    }
+    a:hover {
+        color: #00AAAA;
+      }
 }
 .img-right {
     justify-content: flex-end;
