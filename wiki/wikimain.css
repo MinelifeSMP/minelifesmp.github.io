@@ -22,7 +22,7 @@ body {
     grid-template-areas: 
         "header header"
         "menu main";
-    background-image: url(../assets/wikibackground.png);
+    background-image: url(../assets/wikibackground.webp);
     background-position: center;
 }
 .menu {
