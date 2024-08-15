@@ -24,7 +24,7 @@ body {
         "main main"
         "footer footer";
         gap: 10px;
-    background-image: url(assets/background.png);
+    background-image: url(assets/background.webp);
     background-position: center;
 }
 .footer {
