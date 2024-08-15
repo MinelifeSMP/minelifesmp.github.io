@@ -28,7 +28,7 @@ class SidebarLegal extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <legal class="legal">
-            <a href="/impressum">Impressum</a>
+            <a href="/contact">Contact</a>
         </legal>
     `
     }
