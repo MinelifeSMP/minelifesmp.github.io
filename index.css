@@ -70,62 +70,28 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+    .main {
+        justify-content: space-evenly;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 1000px) {
     body {
-        grid-template-columns: 200px 1fr;
+        grid-template-rows: 10% 15% 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "side"
+            "main";
     }
     .sidebar {
         margin: 5px;
         padding: 15px;
     }
     .main {
-        grid-template-columns: repeat(auto-fill, 200px);
+        grid-template-columns: repeat(auto-fill, 180px);
         margin: 5px;
     }
-}
-
-@media (max-width: 768px) {
-    body {
-        grid-template-rows: 80px 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "header"
-            "main";
-    }
-    .sidebar {
-        display: none;
-    }
-    .main {
-        grid-template-columns: repeat(auto-fill, 150px);
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        grid-template-rows: 60px 1fr;
-        background-image: url(assets/background_blurred.webp);
-        background-position: center;
-    }
-    .header_logo {
-        max-width: 200px;
-    }
-    .main {
-        grid-template-columns: repeat(auto-fill, 150px);
-        padding: 10px;
-    }
-    .member {
-        font-size: medium;
-    }
-    .avatar {
-        width: 100%;
-        max-width: 150px;
-    }
-    .member_name {
-        margin-top: 8px;
-        margin-top: 0px; /* Reduced gap between name and role text */
-    }
-    .member_role {
-        margin-top: 0px; /* Reduced gap between name and role text */
-    }
-
 }
