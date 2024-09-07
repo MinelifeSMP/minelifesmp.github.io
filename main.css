@@ -1,4 +1,10 @@
 /* main.css */
+body {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
 .header {
     display: flex;
     position: sticky;
