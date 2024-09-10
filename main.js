@@ -34,7 +34,7 @@ class SidebarMenu extends HTMLElement {
             </div>
             <button class="collapsible">Mods and Addons</button>
             <div class="submenu">
-                <a href="../wiki/season3addons">- Season III</a><br>
+                <a href="/wiki/season3addons">- Season III</a><br>
             </div> 
             <p>Wiki:</p>
             <button class="collapsible">SEASON I</button>
@@ -47,8 +47,8 @@ class SidebarMenu extends HTMLElement {
             </div>
             <button class="collapsible">SEASON III</button>
             <div class="submenu">
-                <a href="../wiki/season3shoppingdistrict">- Shopping District</a><br>
-                <a href="../wiki/season3townhall">- Townhall</a>
+                <a href="/wiki/season3shoppingdistrict">- Shopping District</a><br>
+                <a href="/wiki/season3townhall">- Townhall</a>
             </div> 
         </sidebarmenu>
     `

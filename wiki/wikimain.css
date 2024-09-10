@@ -54,6 +54,7 @@ body {
     gap: 20px;
 }
 .content {
+    overflow: auto;
     grid-area: content;
     background-color: rgba(27, 28, 36, 0.8);
     padding: 5px;
@@ -84,11 +85,23 @@ body {
         color: #00AAAA;
       }
 }
+.wikiaddonblocks {
+    a:link, a:visited {
+        color: #FFAA00;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+    }
+    a:hover {
+        color: #00AAAA;
+      }
+}
 .img-right {
     justify-content: flex-end;
     margin-left: auto;
 }
 .infopanel {
+    position: sticky;
     grid-area: infopanel;
     background-color: rgba(27, 28, 36, 0.8);
     justify-content: center;
@@ -104,4 +117,8 @@ hr {
     border-top: 1px solid #1b1c24;
     margin-right: 10%;
     margin-left: 10%;
+}
+.addonlinks{
+    text-align: start;
+    margin-left: 10px;
 }
