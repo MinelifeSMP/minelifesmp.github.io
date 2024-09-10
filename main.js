@@ -8,21 +8,6 @@ class SharedHeader extends HTMLElement {
 }
 customElements.define('shared-header', SharedHeader)
 
-//Worlddownloadlinks from the sidebar menu
-class SidebarWdls extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <wdls class="wdls">
-            <b>Worlddownloads</b> <br><br>
-            <a href="https://drive.google.com/file/d/1CmUdQ_6olIp8GrlYp_Qz5KUgyx4uBDic/view?usp=drive_link">Season I</a> <br>
-            <a href="https://drive.google.com/file/d/1ybK5j6b-2OrHNHbhpS7x5DEjfNzVqhRG/view?usp=drive_link">Season II</a> <br>
-            <a href="https://drive.google.com/file/d/1VlwUSe5QpIEIyANbPnRk2RVLRueOzl3t/view?usp=drive_link">Season III Year I</a>
-        </wdls>
-    `
-    }
-}
-customElements.define('sidebar-wdls', SidebarWdls)
-
 //Legal stuff from the sidebar menu
 class SidebarLegal extends HTMLElement {
     connectedCallback() {
@@ -35,30 +20,41 @@ class SidebarLegal extends HTMLElement {
 }
 customElements.define('sidebar-legal', SidebarLegal)
 
-//Wiki Menu
-class WikiMenu extends HTMLElement {
+//Sidebar Menu
+class SidebarMenu extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <wikimenu class="wikimenu">
+        <sidebarmenu class="sidebarmenu">
+            <p>Technical stuff:</p>
+            <button class="collapsible">Worlddownloads</button>
+            <div class="submenu">
+                <a href="https://drive.google.com/file/d/1CmUdQ_6olIp8GrlYp_Qz5KUgyx4uBDic/view?usp=drive_link">Season I</a> <br>
+                <a href="https://drive.google.com/file/d/1ybK5j6b-2OrHNHbhpS7x5DEjfNzVqhRG/view?usp=drive_link">Season II</a> <br>
+                <a href="https://drive.google.com/file/d/1VlwUSe5QpIEIyANbPnRk2RVLRueOzl3t/view?usp=drive_link">Season III Year I</a>
+            </div>
+            <button class="collapsible">Mods and Addons</button>
+            <div class="submenu">
+                <a href="../wiki/season3addons">- Season III</a><br>
+            </div> 
             <p>Wiki:</p>
             <button class="collapsible">SEASON I</button>
             <div class="submenu">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Nothing here yet! Please consider adding missing content through Github Pull requests!</p>
             </div>
             <button class="collapsible">SEASON II</button>
             <div class="submenu">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Nothing here yet! Please consider adding missing content through Github Pull requests!</p>
             </div>
             <button class="collapsible">SEASON III</button>
             <div class="submenu">
                 <a href="../wiki/season3shoppingdistrict">- Shopping District</a><br>
                 <a href="../wiki/season3townhall">- Townhall</a>
             </div> 
-        </wikimenu>
+        </sidebarmenu>
     `
     }
 }
-customElements.define('wiki-menu', WikiMenu)
+customElements.define('sidebar-menu', SidebarMenu)
 
 //collapsible
 
