@@ -32,10 +32,14 @@ class SidebarMenu extends HTMLElement {
                 <a href="https://drive.google.com/file/d/1ybK5j6b-2OrHNHbhpS7x5DEjfNzVqhRG/view?usp=drive_link">Season II</a> <br>
                 <a href="https://drive.google.com/file/d/1VlwUSe5QpIEIyANbPnRk2RVLRueOzl3t/view?usp=drive_link">Season III Year I</a>
             </div>
+            <button class="collapsible">Server Maps</button>
+            <div class="submenu">
+                <a href="https://minelifesmp.com/map">Season III Live Map</a>
+            </div>
             <button class="collapsible">Mods and Addons</button>
             <div class="submenu">
                 <a href="/wiki/season3addons">- Season III</a><br>
-            </div> 
+            </div>
             <p>Wiki:</p>
             <button class="collapsible">SEASON I</button>
             <div class="submenu">
