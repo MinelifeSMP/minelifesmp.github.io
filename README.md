@@ -1,2 +1,2 @@
-# minelifesmp.github.io
+# minelifesmp.com
 The official Minelife SMP Website!
