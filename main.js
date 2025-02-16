@@ -68,13 +68,22 @@ for (i = 0; i < coll.length; i++) {
 //popups
 const memberLinks = {
     'craemon': [
-        { name: 'Twitter', url: 'https://twitter.com/craemon', icon: 'fab fa-twitter' },
-        { name: 'GitHub', url: 'https://github.com/craemon', icon: 'fab fa-github' }
+        { name: 'YouTube', url: 'https://www.youtube.com/@craemonmc', icon: 'fab fa-youtube' },
+        { name: 'YouTube (2nd)', url: 'https://www.youtube.com/@craemondoesrandomstuff', icon: 'fab fa-youtube' },
+        { name: 'GitHub', url: 'https://github.com/Craemon', icon: 'fab fa-github' },
+        { name: 'Modrinth', url: 'https://modrinth.com/user/Craemon', icon: 'fa-solid fa-download' },
+        { name: 'Bluesky', url: 'https://bsky.app/profile/craemon.com', icon: 'fab fa-bluesky' }
     ],
-    'alex': [
-        { name: 'Instagram', url: 'https://instagram.com/alex', icon: 'fab fa-instagram' },
-        { name: 'GitHub', url: 'https://github.com/alex', icon: 'fab fa-github' }
+    'venym': [
+        { name: 'YouTube', url: 'https://www.youtube.com/@venymMC', icon: 'fab fa-youtube' }
+    ],
+    'fricaii': [
+        { name: 'YouTube', url: 'https://www.youtube.com/@fricaii', icon: 'fab fa-youtube' }
+    ],
+    'tekeyn': [
+        { name: 'YouTube', url: 'https://www.youtube.com/@tekeyn', icon: 'fab fa-youtube' }
     ]
+    
 };
 
 function openPopup(memberId) {
