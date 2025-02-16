@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="https://kit.fontawesome.com/8644cc4e81.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <shared-header class="header"></shared-header>
@@ -21,20 +22,16 @@
         <sidebar-legal class="legal"></sidebar-legal>
     </section>
     <main class="main">
-        <a href="member/craemon/profile">
-        <div class="member">
-            <img src="assets/avatar/craemon.webp" alt="Avatar Craemon" class="avatar">
-            <div class="member_name"><b>Craemon</b></div>
-            <div class="member_role"><b>Owner and Admin</b></div>
+        <div class="member" onclick="openPopup('craemon')">
+            <img src="assets/avatar/craemon.webp" alt="Craemon" class="avatar">
+            <div class="member_name">Craemon</div>
+            <div class="member_role">Owner and Admin</div>
         </div>
-        </a>
-        <a href="member/venym/profile">
-        <div class="member">
+        <div class="member" onclick="openPopup('venym', 'Venym')">
             <img src="assets/avatar/venym.webp" alt="Avatar Venym" class="avatar">
             <div class="member_name"><b>Venym</b></div>
             <div class="member_role"><b>Owner</b></div>
         </div>
-        </a>
         <a href="member/fricaii/profile">
         <div class="member">
             <img src="assets/avatar/fricaii.webp" alt="Avatar Fricaii" class="avatar">
@@ -238,6 +235,13 @@
             <div class="member_role"><b>Member</b></div>
         </div>
     </main>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-name"></h2>
+            <ul id="popup-links"></ul>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

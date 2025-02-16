@@ -25,7 +25,7 @@ class SidebarMenu extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <sidebarmenu class="sidebarmenu">
-            <p>Technical stuff:</p>
+            <p>Links:</p>
             <button class="collapsible">Worlddownloads</button>
             <div class="submenu">
                 <a href="https://drive.google.com/file/d/1CmUdQ_6olIp8GrlYp_Qz5KUgyx4uBDic/view?usp=drive_link">Season I</a> <br>
@@ -33,28 +33,15 @@ class SidebarMenu extends HTMLElement {
                 <a href="https://drive.google.com/file/d/1VlwUSe5QpIEIyANbPnRk2RVLRueOzl3t/view?usp=drive_link">Season III Year I</a>
                 <a href="https://drive.google.com/file/d/10X8HQC3pH4zgmtMfol5_R1Fl6YjGnk0s/view?usp=sharing">Limbo World</a>
             </div>
-            <button class="collapsible">Server Maps</button>
+            <button class="collapsible">Server Live Maps</button>
             <div class="submenu">
                 <a href="https://minelifesmp.com/map">Season III Live Map</a>
             </div>
-            <button class="collapsible">Mods and Addons</button>
+            <button class="collapsible">Modpacks</button>
             <div class="submenu">
-                <a href="/wiki/season3addons">- Season III</a><br>
+                <a href="https://modrinth.com/modpack/minelife-smp">- Normal version</a><br>
+                <a href="https://modrinth.com/modpack/minelife-smp-lite">- Lite version</a><br>
             </div>
-            <p>Wiki:</p>
-            <button class="collapsible">SEASON I</button>
-            <div class="submenu">
-            <p>Nothing here yet! Please consider adding missing content through Github Pull requests!</p>
-            </div>
-            <button class="collapsible">SEASON II</button>
-            <div class="submenu">
-            <p>Nothing here yet! Please consider adding missing content through Github Pull requests!</p>
-            </div>
-            <button class="collapsible">SEASON III</button>
-            <div class="submenu">
-                <a href="/wiki/season3shoppingdistrict">- Shopping District</a><br>
-                <a href="/wiki/season3townhall">- Townhall</a>
-            </div> 
         </sidebarmenu>
     `
     }
@@ -76,4 +63,41 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     }
   });
+}
+
+//popups
+const memberLinks = {
+    'craemon': [
+        { name: 'Twitter', url: 'https://twitter.com/craemon', icon: 'fab fa-twitter' },
+        { name: 'GitHub', url: 'https://github.com/craemon', icon: 'fab fa-github' }
+    ],
+    'alex': [
+        { name: 'Instagram', url: 'https://instagram.com/alex', icon: 'fab fa-instagram' },
+        { name: 'GitHub', url: 'https://github.com/alex', icon: 'fab fa-github' }
+    ]
+};
+
+function openPopup(memberId) {
+    const popup = document.getElementById('popup');
+    const name = document.getElementById('popup-name');
+    const links = document.getElementById('popup-links');
+
+    name.textContent = memberId.charAt(0).toUpperCase() + memberId.slice(1);
+    links.innerHTML = '';
+
+    memberLinks[memberId].forEach(link => {
+        links.innerHTML += `<li><a href="${link.url}" target="_blank" rel="noopener noreferrer"><i class="${link.icon}"></i>${link.name}</a></li>`;
+    });
+
+    popup.style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById('popup')) {
+        closePopup();
+    }
 }
