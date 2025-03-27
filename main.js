@@ -31,7 +31,7 @@ class SidebarMenu extends HTMLElement {
                 <a href="https://drive.google.com/file/d/1CmUdQ_6olIp8GrlYp_Qz5KUgyx4uBDic/view?usp=drive_link">Season I</a> <br>
                 <a href="https://drive.google.com/file/d/1ybK5j6b-2OrHNHbhpS7x5DEjfNzVqhRG/view?usp=drive_link">Season II</a> <br>
                 <a href="https://drive.google.com/file/d/1VlwUSe5QpIEIyANbPnRk2RVLRueOzl3t/view?usp=drive_link">Season III Year I</a>
-                <a href="https://drive.google.com/file/d/10X8HQC3pH4zgmtMfol5_R1Fl6YjGnk0s/view?usp=sharing">Limbo World</a>
+                <a href="https://drive.google.com/file/d/1s4bYCKy4D6VGGtR4HxBMRkBEwbxGmfAT/view?usp=sharing">Limbo World</a>
             </div>
             <button class="collapsible">Server Live Maps</button>
             <div class="submenu">
