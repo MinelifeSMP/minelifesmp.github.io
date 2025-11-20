@@ -83,6 +83,10 @@ const memberLinks = {
     ],
     'tekeyn': [
         { name: 'YouTube', url: 'https://www.youtube.com/@tekeyn', icon: 'fab fa-youtube' }
+    ],
+    'deniphanyt': [
+        { name: 'YouTube', url: 'https://www.youtube.com/@SnnrYT', icon: 'fab fa-youtube' },
+        { name: 'Twitch', url: 'https://www.twitch.tv/snnryt', icon: 'fab fa-twitch' }
     ]
     
 };
